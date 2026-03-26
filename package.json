@@ -1,6 +1,6 @@
 {
   "name": "getpumpagent",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "The PumpFun Trading SDK — swap execution, token data, and MCP server in one package",
   "type": "module",
   "main": "dist/index.js",
@@ -11,15 +11,29 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "bin": {
+    "getpumpagent": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["pumpfun", "solana", "swap", "trading", "sdk"],
+  "keywords": [
+    "pumpfun",
+    "solana",
+    "swap",
+    "trading",
+    "sdk"
+  ],
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.13.6"
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "axios": "^1.13.6",
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",

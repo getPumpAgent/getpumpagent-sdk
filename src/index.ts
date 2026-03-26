@@ -7,5 +7,12 @@ export type {
   TokenInfo,
   TokenListResponse,
   TokenRiskResponse,
+  TokenDetail,
+  RiskScore,
   KolActivity,
+  KolWallet,
+  MarketStats,
+  OHLCVCandle,
+  HolderData,
+  Narrative,
 } from "./types.js";
