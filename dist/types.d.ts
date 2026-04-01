@@ -11,6 +11,7 @@ export interface SwapParams {
     pool?: "pump" | "pumpswap" | "auto";
     userWallet: string;
     jito?: boolean;
+    priorityLevel?: "low" | "medium" | "high" | "very-high";
 }
 export interface PlatformFee {
     bps: number;
@@ -28,7 +29,13 @@ export interface SwapResponse {
     slippageBps: number | "auto";
     platformFee: PlatformFee;
     jito: boolean;
+    jitoEnabled: boolean;
+    tipLamports: number;
+    senderEndpoint: string;
     pool: string;
+    priorityLevel: string;
+    retryCount: number;
+    simulationPassed: boolean;
 }
 export interface TokenInfo {
     mint: string;
